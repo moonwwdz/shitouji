@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script src="js/modernizr.custom.79639.js"></script>
+		<link href="css/nehan.css" type="text/css" rel="stylesheet">
+		<script src="js/nehan.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="container" class="container">	
+
+			<div class="menu-panel">
+				<h3>Table of Contents</h3>
+				<ul id="menu-toc" class="menu-toc">
+					<li class="menu-toc-current"><a href="#item1">Self-destruction</a></li>
+					<li><a href="#item2">Why we die</a></li>
+					<li><a href="#item3">The honeymoon</a></li>
+					<li><a href="#item4">A drawing joke</a></li>
+					<li><a href="#item5">Commencing practice</a></li>
+				</ul>
+				
+			</div>
+
+			<div class="bb-custom-wrapper">
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item" id="item1">
+						<div class="content">
+							<div class="scroller">
+								<div id="result"></div>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item2">
+						<div class="content">
+							<div class="scroller">
+								<h2>Why we die</h2>
+								
+								<p><em>From <a href="http://www.gutenberg.org/ebooks/41595" target="_blank">"The Funny Side of Physic"</a> by A. D. Crabtre</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item3">
+						<div class="content">
+							<div class="scroller">
+								<h2>The honeymoon</h2>
+								<p>The origin of the honeymoon is not generally known.</p>
+
+								
+								<p><em>From <a href="http://www.gutenberg.org/ebooks/41595" target="_blank">"The Funny Side of Physic"</a> by A. D. Crabtre</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item4">
+						<div class="content">
+							<div class="scroller">
+								<h2>A drawing joke</h2>
+								<
+
+								<p><em>From <a href="http://www.gutenberg.org/ebooks/41595" target="_blank">"The Funny Side of Physic"</a> by A. D. Crabtre</em></p>
+							</div>
+						</div>
+					</div>
+					<div class="bb-item" id="item5">
+						<div class="content">
+							<div class="scroller">
+								<h2>Commencing practice</h2>
+								<p>From that excellent work, "Scenes in the Practice of a New York Surgeon,"
+								by Dr. E. H. Dixon, I copy, with some abbreviation, the following, which
+								the author terms "Leaves from the Log-book of an Unfledged Æsculapian:"--</p>
+
+								
+
+								<p><em>From <a href="http://www.gutenberg.org/ebooks/41595" target="_blank">"The Funny Side of Physic"</a> by A. D. Crabtre</em></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<nav>
+					<span id="bb-nav-prev">&larr;</span>
+					<span id="bb-nav-next">&rarr;</span>
+				</nav>
+
+				<span id="tblcontents" class="menu-button">Table of Contents</span>
+
+			</div>
+				
+		</div><!-- /container -->
+		<script src="http://libs.useso.com/js/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/jquery.jscrollpane.min.js"></script>
+		<script src="js/jquerypp.custom.js"></script>
+		<script src="js/jquery.bookblock.js"></script>
+		<script src="js/page.js"></script>
+		<script>
+			$(function() {
+
+				Page.init();
+
+			});
+		</script>
+
+		<script>
+	var target = document.querySelector("#result");
+
+new Nehan.Document()
+  .setStyles({
+    "body":{
+      flow:"tb-rl", // or "tb-rl"
+      fontSize:16,
+      width:640, // page width
+      height:480 // page height
+    },
+    "p.line":{
+      margin:{after:"1em"} // use 'logical' property!!
+    }
+  })
+  .setContent([
+  	"<p class='float-start' style='measure:100px; background:gray'>短い長さの前方コンテンツ</p>",
+  	"<p class='float-start' style='measure:80px; background:red; display:block'><br></p>",
+  	"<h3><ruby>日本<rt>にほん</rt></ruby>と<ruby>漢字<rt>かんじ</rt></ruby></h3><br />",
+    "<p><ruby>漢字<rt>かんじ</rt></ruby>と<span class='xx-large'><ruby>日本<rt>にほん</rt></ruby></span>と无可奈何花落去，加可以忏悔我的过去你的霜可以忏悔我的可以忏悔我的可以忏悔我的可以忏悔我的<span class='empha-dot-open'>圏点</span>です。</p>これは<span class='x-large'>大きい</span>文字<br />",
+    "<p><a href='#'><ruby>漢字<rt>かんじ</rt></ruby></a>と<a href='#'><span class='xx-large'><ruby>日本<rt>にほん</rt></ruby></span></a>と<a href='#3'><span class='empha-dot-open'>圏点</span></a>です。</p><br /><a href='#'><ruby>漢字<rt>かんじ</rt></ruby></a>と<a href='#'><span class='xx-large'><ruby>日本<rt>にほん</rt></ruby></span></a>と<a href='#3'><span class='empha-dot-open'>圏点</span></a>です。<br />"
+  ].join("\n"))
+  .render({
+    // called for each page output.
+    onPage: function(page, ctx){
+      console.log("onPage:%o", page);
+      // append generated page
+      target.appendChild(page.element);
+    },
+    onComplete: function(time, ctx){
+      // parsing complete, now you can get outline(toc) element.
+      var outline = ctx.createOutlineElement({
+        onClickLink:function(toc, evt){
+          console.log("click %o", toc);
+        }
+      });
+      console.log("finished! %fmsec", time);
+    }
+  });
+</script>
+	</body>
+</html>

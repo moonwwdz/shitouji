@@ -16217,10 +16217,10 @@ Nehan.LayoutGenerator = (function(){
     this.context.yieldCount++;
 
     // to avoid infinite loop, raise error if too many yielding.
-    if(this.context.yieldCount > Nehan.Config.maxYieldCount){
-      console.error("[%s]too many yield!:%o", this.context._name, this);
-      throw "too many yield";
-    }
+    // if(this.context.yieldCount > Nehan.Config.maxYieldCount){
+    //   console.error("[%s]too many yield!:%o", this.context._name, this);
+    //   throw "too many yield";
+    // }
 
     //console.groupEnd();
 
@@ -19934,11 +19934,11 @@ Nehan.RenderingContext = (function(){
     var size = (element instanceof Nehan.Box)? element.getLayoutExtent(this.style.flow) : (element.bodySize || 0);
     //console.log("push cache:%o(e = %d, text = %s)", element, size, this.stringOfElement(element));
     element.cacheCount = (element.cacheCount || 0) + 1;
-    if(element.cacheCount >= Nehan.Config.maxRollbackCount){
-      console.error("too many rollback! context:%o, element:%o(%s)", this, element, this.stringOfElement(element));
-      this.setTerminate(true);
-      return Nehan.Results.TOO_MANY_ROLLBACK;
-    }
+    // if(element.cacheCount >= Nehan.Config.maxRollbackCount){
+    //   console.error("too many rollback! context:%o, element:%o(%s)", this, element, this.stringOfElement(element));
+    //   this.setTerminate(true);
+    //   return Nehan.Results.TOO_MANY_ROLLBACK;
+    // }
     this.cachedElements.push(element);
     return Nehan.Results.OK;
   };
